@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+		<title>Test page</title>
+</head>
+<body>
+	<script id="insultTemplate" type="text/x-handlebars-template">
+		{{#if firstLoad}}
+			{{#if hasError}}
+				Error: insults failed to Loading
+			{{else}}
+				{{#each earthquakes.features}}
+					<h2>{{properties.mag}}</h2>
+					<h3>{{properties.time}}:{{properties.place}}</h3>
+					<cite><a href='{{url}}'>LINK</a></cite>
+				{{/each}}
+			{{/if}}
+		{{else}}
+			Loading&hellip;
+		{{/if}}
+	</script>
+	<h1>Insult Time!</h1>
+	<button id='getAnotherInsult'>Get Another Insult</button>
+	<div id='insultContainer'>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>
