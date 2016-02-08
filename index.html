@@ -1,17 +1,18 @@
 <!doctype html>
 <html>
 <head>
-		<title>Test page</title>
+		<title>Earthquakes</title>
 </head>
 <body>
 	<script id="insultTemplate" type="text/x-handlebars-template">
 		{{#if firstLoad}}
 			{{#if hasError}}
-				Error: insults failed to Loading
+				Error: earthquake info failed to load
 			{{else}}
 				{{#each earthquakes.features}}
-					<h2>{{properties.mag}}</h2>
-					<h3>{{properties.time}}:{{properties.place}}</h3>
+					<h2>Magnitude:&nbsp{{properties.mag}}</h2>
+					<h3>Time:&nbsp{{properties.time}}</h3>
+					<h3>Place:&nbsp{{properties.place}}</h3>
 					<cite><a href='{{url}}'>LINK</a></cite>
 				{{/each}}
 			{{/if}}
