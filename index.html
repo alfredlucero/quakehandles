@@ -4,7 +4,7 @@
 		<title>Earthquakes</title>
 </head>
 <body>
-	<script id="insultTemplate" type="text/x-handlebars-template">
+	<script id="earthquakeTemplate" type="text/x-handlebars-template">
 		{{#if firstLoad}}
 			{{#if hasError}}
 				Error: earthquake info failed to load
@@ -20,9 +20,9 @@
 			Loading&hellip;
 		{{/if}}
 	</script>
-	<h1>Insult Time!</h1>
+	<h1>Earthquake Data</h1>
 	<button id='getAnotherInsult'>Get Another Insult</button>
-	<div id='insultContainer'>
+	<div id='earthquakeContainer'>
 	</div>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.js"></script>

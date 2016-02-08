@@ -1,31 +1,30 @@
 $(document).ready(function() {
 		var REQUEST_URL = 'http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geojson';
-		var insultContainer = $('#insultContainer');
+		var earthquakeContainer = $('#earthquakeContainer');
 		var responses = {};
-		var template = Handlebars.compile($('#insultTemplate').html());
-		$('#getAnotherInsult').click(getInsult);
+		var template = Handlebars.compile($('#earthquakeTemplate').html());
+		$('#getAnotherInsult').click(getEarthquake);
 		
-		renderInsult();
-		getInsult();
-		getInsult();
-		function getInsult() {
+		renderEarthquake();
+		getEarthquake();
+		function getEarthquake() {
 				$.get(REQUEST_URL).then(function(resp) {
 					responses.earthquakes = resp;
 					responses.firstLoad = true;
 					responses.hasError = false;
-					renderInsult();
+					renderEarthquake();
 			}).catch(function() {
 				responses.hasError = true;
 			}).always(function() {
 				responses.firstLoad = true;
-				renderInsult();
+				renderEarthquake();
 			});
 		}
 
-		function renderInsult() {
+		function renderEarthquake() {
 			var templateHtml = template(responses);
-			insultContainer.empty();
-			insultContainer.html(templateHtml);
+			earthquakeContainer.empty();
+			earthquakeContainer.html(templateHtml);
 		}
 		
 });
