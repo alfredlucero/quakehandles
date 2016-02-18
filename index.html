@@ -16,19 +16,36 @@
 				Error: earthquake info failed to load
 			{{else}}
 				{{#each earthquakes.features}}
-					<h2>Magnitude:&nbsp{{properties.mag}}</h2>
-					<h3>Time:&nbsp{{properties.time}}</h3>
-					<h3>Place:&nbsp{{properties.place}}</h3>
-					<cite><a href='{{url}}'>LINK</a></cite>
+					<div class="small-12 columns quake-descr">
+						<h3>Magnitude:&nbsp{{properties.mag}}</h2>
+						<h3>Time:&nbsp{{properties.time}}</h3>
+						<h3>Place:&nbsp{{properties.place}}</h3>
+						<cite><a href='{{url}}'>LINK</a></cite>
+					</div>
 				{{/each}}
 			{{/if}}
 		{{else}}
 			Loading&hellip;
 		{{/if}}
 	</script>
-	<h1>EARTHQUAKE DATA</h1>
-	<button id='getAnotherInsult'>Get Another Insult</button>
-	<div id='earthquakeContainer'>
+	<div class="hero" id="top-hero">
+		<div class="row">
+			<div class="small-12 columns" id="top-hero-heading">
+				<h1 class="small-12 columns" id="top-hero-title">USGS EARTHQUAKE TRACKER</h1>
+				<h3 class="small-12 columns" id="top-hero-descr">
+				SHAKES FELT AROUND THE WORLD
+				</h3>
+			</div>
+		</div>
+	</div>
+	
+	<div class="row">
+		<a class="button small-12 medium-12 columns" id="refreshEarthquakes">REFRESH</a>
+	</div>
+
+	<div class="row">
+		<div class="small-12 columns" id="earthquakeContainer">
+		</div>
 	</div>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.js"></script>

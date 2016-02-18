@@ -1,3 +1,56 @@
 body {
 	font-family: 'Nunito', sans-serif;
 }
+
+#top-hero {
+	position: relative;
+	background: -webkit-linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('http://widewallpaper.info/wp-content/uploads/2016/01/Inside-the-green-forest_Ultra-HD-hipster-4k-wallpaper.jpg');
+	background: -o-linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('http://widewallpaper.info/wp-content/uploads/2016/01/Inside-the-green-forest_Ultra-HD-hipster-4k-wallpaper.jpg');
+	background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('http://widewallpaper.info/wp-content/uploads/2016/01/Inside-the-green-forest_Ultra-HD-hipster-4k-wallpaper.jpg');
+	background-size: cover;
+	background-position: center;
+	height: 450px;
+}
+
+#top-hero-heading {
+	color: white;
+	position: absolute;
+	top: 10%;
+	left: 10%;
+	letter-spacing: 5px;
+}
+
+.button {
+	color: transparent;
+	font-size: 2.5rem;
+	letter-spacing: 5px;
+	border: 4px solid transparent;
+	border-image: linear-gradient(45deg, maroon, skyblue);
+	border-image-slice: 1;
+	background: linear-gradient(45deg, maroon, skyblue);
+	-webkit-background-clip: text;
+	text-fill-color: transparent;
+	transition: all 0.2s ease; 
+}
+
+.button:hover {
+	background: linear-gradient(45deg, maroon, skyblue);
+	border-image: linear-gradient(45deg, maroon, skyblue);
+}
+
+#earthquakeContainer {
+	letter-spacing: 2.5px;
+	color: transparent; 
+	background: linear-gradient(45deg, maroon, skyblue);
+	-webkit-background-clip: text;
+	text-fill-color: transparent;
+	border: 4px solid transparent;
+	border-image: linear-gradient(45deg, green, skyblue);
+	border-image-slice: 1;
+}
+
+.quake-descr {
+	border: 4px solid transparent;
+	border-image: linear-gradient(45deg, pink, skyblue);
+	border-image-slice: 1;
+}

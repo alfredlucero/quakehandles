@@ -3,7 +3,7 @@ $(document).ready(function() {
 		var earthquakeContainer = $('#earthquakeContainer');
 		var responses = {};
 		var template = Handlebars.compile($('#earthquakeTemplate').html());
-		$('#getAnotherInsult').click(getEarthquake);
+		$('#refreshEarthquakes').click(getEarthquake);
 		
 		renderEarthquake();
 		getEarthquake();
