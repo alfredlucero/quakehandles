@@ -34,7 +34,11 @@ body {
 	transition: all 0.2s ease; 
 }
 
-.button:hover {
+.hollow {
+	font-size: 2rem;
+}
+
+#refreshButton:hover {
 	background: linear-gradient(45deg, maroon, skyblue);
 	border-image: linear-gradient(45deg, maroon, skyblue);
 }
@@ -52,6 +56,7 @@ body {
 }
 
 .quake-descr {
+	padding: 15px;
 	border: 4px solid transparent;
 	border-image: linear-gradient(45deg, pink, skyblue);
 	border-image-slice: 1;
