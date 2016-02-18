@@ -20,9 +20,10 @@
 						<h3>Magnitude:&nbsp{{properties.mag}}</h2>
 						<h3>Time:&nbsp{{properties.time}}</h3>
 						<h3>Place:&nbsp{{properties.place}}</h3>
+						<span><h3>Coordinates:&nbsp{{geometry.coordinates}}</h3>
 						<span>
 							<a class="hollow button small-6 columns" href='{{properties.url}}'>USGS INFO</a>
-							<a class="success hollow button small-6 columns">GOOGLE MAP</a>
+							<a class="success hollow button small-6 columns" id="gmap">GOOGLE MAP</a>
 						</span>
 					</div>
 				{{/each}}
@@ -36,7 +37,7 @@
 			<div class="small-12 columns" id="top-hero-heading">
 				<h1 class="small-12 columns" id="top-hero-title">USGS EARTHQUAKE TRACKER</h1>
 				<h3 class="small-12 columns" id="top-hero-descr">
-				SHAKES FELT AROUND THE WORLD
+				GLOBAL SHAKES IN THE PAST DAY, UPDATED EVERY 5 MINUTES
 				</h3>
 			</div>
 		</div>
