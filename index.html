@@ -23,7 +23,7 @@
 						<span><h3>Coordinates:&nbsp{{geometry.coordinates}}</h3>
 						<span>
 							<a class="hollow button small-6 columns" href='{{properties.url}}'>USGS INFO</a>
-							<a class="success hollow button small-6 columns" id="gmap">GOOGLE MAP</a>
+							<a class="success hollow button small-6 columns" id="gmap" href='http://maps.google.com/?q={{trimCoords geometry.coordinates}}'>GOOGLE MAP</a>
 						</span>
 					</div>
 				{{/each}}
